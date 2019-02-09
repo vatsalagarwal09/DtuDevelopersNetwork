@@ -1,0 +1,207 @@
+#profilePic {
+	display: block;
+	width: 40%;
+	margin-top : 5px;
+	margin-bottom: 2px;
+	margin-left: 10px;
+}
+
+.tophead{
+	height:35px;
+	background-color: #2C5197;
+	color: white;
+	padding:5px;
+	margin-bottom: 2px;
+}
+
+.inputstyle{
+	margin-left:10px;
+	margin-top:4px;
+}
+
+.personinfo {
+	margin-left: 10px;
+	margin-bottom : 0px;
+	
+}
+
+#leftColumn {
+	border: 1px solid;
+	border-color: #2C5197;
+	padding:0px;
+	
+}
+
+#leftSubColumn{
+	margin: 10px;
+	border: 1px solid;
+	border-color: #2C5197;
+	padding:10px;
+	height:200px;
+	overflow-y: auto;
+}
+
+.buttoncss{
+	margin-bottom:5px;
+	margin-left:10px;
+}
+
+.postDivs {
+	background-color: rgb(248,249,250);
+	padding: 0.5rem;
+	border: 2px solid white;
+}
+
+.dateDivs {
+	text-align: center;
+}
+
+.dateOnPosts {
+	text-align: center;
+	margin: 0px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+}
+
+.subject {
+	text-align: center;
+	margin: 0px;
+	font-size: 20px;
+}
+
+th {
+	text-align: center;
+	border-top: 2px solid white;
+	border-left: 2px solid white;
+	border-right: 2px solid white;
+}
+
+#subjectTH {
+	background-color: rgb(232,236,239);
+}
+
+#nameTH {
+	background-color: rgb(232,236,239);
+}
+
+td {
+	text-align: center;
+	border: 2px solid white;
+}
+
+table {
+	width: 100%;
+}
+
+.card {
+	margin: auto;
+}
+
+.card-img-top {
+	margin: auto;
+}
+
+.dateTD {
+	padding: 0px;
+	vertical-align: middle;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.5em;
+}
+
+.dateTD p {
+	margin: 0px;
+	text-align: center;
+}
+
+.subjectTD {
+	padding: 1.0rem;
+	text-align: left;
+	background-color: rgb(232,236,239);
+}
+
+.nameTD {
+	padding: 1.0rem;
+	background-color: rgb(232,236,239);
+
+}
+
+.names {
+	margin: 0px;
+}
+
+.tableContainer {
+	padding: 0px;
+	margin-bottom: 1em;
+}
+
+.praiseTD {
+	padding: 0px;
+    vertical-align: middle;
+	text-align: center;
+    align-items: center; 
+    justify-content: center;
+    font-size: 24px;
+}
+
+.praiseIcon {
+	margin: 0px;
+}
+
+.praiseNumber {
+	margin: 0px;
+}
+			
+/* Set gray background color and 100% height */
+.sidenav {
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {height: auto;} 
+}
+
+
+#createPost {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	text-align: right;
+}
+
+.deletePostLink {
+	margin-right: 1.5rem;
+}
+
+.myBox {
+	border: 1px solid #2C5197;
+	padding: 3px;
+}
+
+#myCard {
+	margin: 0.8rem!important;
+}
+
+#profilePic {
+	height: 8rem;
+}
+
+.followbtn{
+	margin-top:4px;
+	margin-left:10px;
+}
+
+.unfollowLink {
+	float: right;
+}

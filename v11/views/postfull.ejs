@@ -1,0 +1,116 @@
+<%  include partials/header %>
+	<div class="container">
+	<div class="container">
+	<div class="container">
+	<div class="container">
+	<div class="container tableContainer">
+		<table class="postInfoTable">
+			<tbody>
+				<tr class="onePostBox">
+					<div class="myBox">
+					<div class="headingPostDivs"><p class="dateParas"><%= "Posted on " + post.day + "/" + post.month %></p></div>
+					<div class="content">
+						<div class="card" style="width: 5rem;">
+				  			<img src="<%= "/profileimages/" + post.username  + ".jpg" %>" class="card-img-top" alt="..." onerror='onImgError(this);' onLoad='setDefaultImage(this);'>
+				  		</div>
+				  		<p class="namePara"><a href="<%= "/profile/" + userid + "/" + post.username  %>"><strong><%= post.fullname %></strong></a></p>
+				  		<hr class="myHrs">
+						<div>
+							<p class="subjectWordPara">Subject:</p>
+							<p><%= post.subject %></p>
+						</div>
+						<hr class="myHrs">
+						<p class="contentWordPara">Content:</p>
+						<p id="log">
+						</p>
+							<script>
+							
+							function htmlDecode(input){
+								if (input === "")
+									return input
+								var e = document.createElement('div');
+								e.innerHTML = input;
+								return e.childNodes[0].nodeValue;
+							}
+							
+								var content = `<%= post.body %>`.replace(/(?:\r\n|\r|\n)/g, '<br>');
+								var contentList = content.split('<br>');
+								console.log(contentList);
+								for (i=0;i<contentList.length;i++) {
+									console.log(i);
+									contentList[i] = htmlDecode(contentList[i]);
+								}
+								var myStr = contentList.join("<br>");
+								var $log = $( "#log" );
+								// myBody = $.parseHTML(content);
+								// nodeNames = [];
+								console.log(myStr);
+								$log.append( myStr );
+							</script>
+					</div>
+					</div>
+					<br>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="container commentsHeadingContainer">
+		<div>
+		<div>
+			<form method="POST" action="<%= "/comment/" + userid + "/" + post._id  %>">
+		            <div class="form-group subject-box myTextBoxDiv">
+    		    <input class="form-control" name="text" id="exampleFormControlTextarea1" placeholder="Type your comment here...">
+  		    </div>
+  		<div class = "button-div">
+  		<button type="submit" class="btn btn-dark">Add Comment</button>
+  		</div>
+		</div>
+		</div>
+	</div>
+		<div class="container">
+		<div class="container">
+	    <div class="container">
+		<div class="container">
+		<div class="container">
+		<div class="container">
+	    <div class="container">
+		<div class="container">
+		<div class="container tableContainer">
+		<table>
+			<tbody>
+				<% for(var i=comments.length-1; i>=0; i--){ %>
+				<tr class="onePostBox">
+					<br>
+					<div class="myBox">
+					<div class="headingPostDivs"><p class="dateParas"><%= "Added on " + comments[i].day + "/" + comments[i].month %></p></div>
+					<div class="content">
+						<div class="card" style="width: 5rem;">
+				  			<img src="<%= "/profileimages/" + comments[i].username  + ".jpg" %>" class="card-img-top" alt="..." onerror='onImgError(this);' onLoad='setDefaultImage(this);'>
+				  		</div>
+				  		<p class="namePara"><a href="<%= "/profile/" + userid + "/" + comments[i].username  %>"><strong><%= comments[i].fullname %></strong></a></p>
+						<hr class="myHrs">
+						<div>
+							<p><%= comments[i].text %></p>
+						</div>
+					</div>
+					</div>
+				</tr>
+				<% }; %>
+			</tbody>
+		</table>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+<%  include partials/footer %>

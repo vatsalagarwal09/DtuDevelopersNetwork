@@ -1,0 +1,83 @@
+<%  include partials/header %>
+	<script type="text/javascript">
+	function setDefaultImage(source){
+        var badImg = new Image();
+        badImg.src = "https://ubuntuincident.files.wordpress.com/2011/09/tubi.png?w=150&h=150";
+        var cpyImg = new Image();
+        cpyImg.src = source.src;
+
+        if(!cpyImg.width)
+        {
+            source.src = badImg.src;
+        }
+    }
+
+	function disableFollow(){
+		
+	}
+
+    function onImgError(source){
+        source.src = "https://ubuntuincident.files.wordpress.com/2011/09/tubi.png?w=150&h=150";
+        source.onerror = ""; 
+        return true; 
+    }
+	</script>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3" id="leftColumn">
+				<p class="tophead">User Profile</p>
+			     <div class="card" id="myCard" style="width: 5rem;">
+				  			<img src="<%= "/profileimages/" + user.username  + ".jpg" %>" class="card-img-top" alt="..." onerror='onImgError(this);' onLoad='setDefaultImage(this);'>
+				 </div>
+				<!--<img id="profilePic" src="<%= "/profileimages/" + user.username  + ".jpg" %>" onerror='onImgError(this);' onLoad='setDefaultImage(this);'>-->
+				<p class="personinfo"><%= user.fullname %></p>
+				<p></p>
+				<p class="personinfo"><strong>Branch: </strong><%= user.branch %></p>
+				<p class="personinfo"><strong>Year: </strong><%= user.year %> Year</p>
+				<p class="personinfo"><strong>Username: </strong><%= user.username %></p>
+				<p class="personinfo"><i class="fab fa-github"></i><a href="<%= user.github %>"> Visit Github Profile</a></p>
+				
+				<form method="POST" action="<%= "/follow/" + currentUser._id + "/" + user.username %>">
+					<button class="btn btn-dark followbtn" type="submit">Follow</button>
+				</form>
+				
+				<hr width = "90%">
+				<div id="leftSubColumn">
+					<h5 style="color:#2C5197;"><strong>FOLLOWING</strong></h5>
+					<ul class="list-group list-group-flush">
+						<% for(var i=0; i<following.length; i++){ %>
+							<a href="<%= "/profile/" + user._id + "/" + following[i].following  %>"><li class="list-group-item"><%= following[i].following %></a>
+						<% }; %>
+					</ul>
+				</div>
+			
+			</div>
+			
+			
+			
+			<div class="col-lg-9" id="rightColumn">
+	    	<table>
+
+			<tbody>
+				<%for(var i=posts.length-1; i>=0; i--){%>
+				<tr class="onePostBox">
+					<div class="myBox">
+					<div class="headingPostDivs"><p class="dateParas"><%= "Posted on " + posts[i].day + "/" + posts[i].month %></p></div>
+					<div class="content">
+						<div>
+							<p class="subjectWordPara">Subject:</p>
+							<p><%= posts[i].subject %></p>
+							<p class="linksParaPostDiv"><span class="readFullPostLink"><a href="<%= "/fullpost/" + user._id + "/" + posts[i].id %>">See More...</a></span><span><a href="<%= "/fullpost/" + user._id + "/" + posts[i].id %>">Comment</a></span></p>
+						</div>
+					</div>
+					</div>
+					<br>
+				</tr>
+				<% }; %>
+			</tbody>
+			</table>
+			</div>
+		</div>
+	</div>
+	
+<%  include partials/footer %>

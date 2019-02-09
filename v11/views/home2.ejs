@@ -1,0 +1,59 @@
+<% include partials/header %>
+	<div class="container">
+	<div class="container">
+	<div class="container">
+	<div class="container tableContainer">
+		<table>
+			<tbody>
+				<% for(var i=posts.length-1; i>=0; i--){ %>
+				<tr class="onePostBox">
+					<br>
+					<div class="myBox">
+					<div class="headingPostDivs"><p class="dateParas"><%= "Posted on " + posts[i].day + "/" + posts[i].month %></p></div>
+					<div class="content">
+						<div class="card" style="width: 5rem;">
+				  			<img src="<%= "/profileimages/" + posts[i].username  + ".jpg" %>" class="card-img-top" alt="..." onerror='onImgError(this);' onLoad='setDefaultImage(this);'>
+				  		</div>
+				  		<p class="namePara"><a href="<%= "/profile/" + userid + "/" + posts[i].username  %>"><strong><%= posts[i].fullname %></strong></a></p>
+						<hr class="myHrs">
+						<div>
+							<p class="subjectWordPara">Subject:</p>
+							<p><%= posts[i].subject %></p>
+							<p class="linksParaPostDiv"><span class="readFullPostLink"><a href="<%= "/fullpost/" + userid + "/" + posts[i].id %>">Read Full Post</a></span><span><a href="<%= "/fullpost/" + userid + "/" + posts[i].id %>">Comment</a></span></p>
+						</div>
+					</div>
+					</div>
+				</tr>
+				<% }; %>
+			</tbody>
+
+		</table>
+
+		<div class="container">
+			
+		</div>
+
+
+	</div>
+	</div>
+	</div>
+	</div>
+<!--footer-->
+
+	<div class="footer">
+		<p>Quisque rhoncus, turpis at gravida auctor, libero felis feugiat libero, et placerat erat urna non lectus. Integer a arcu id sapien tempor imperdiet. Donec sed neque tellus. Nulla elementum nibh eget aliquet mollis. Curabitur sed tristique turpis. Nulla facilisi. Ut et nulla convallis, laoreet orci ac, tempor lectus. Nullam lacinia.</p>
+	<!-- hitwebcounter Code START -->
+             <a href="http://www.hitwebcounter.com" target="_blank">
+             <img src="http://hitwebcounter.com/counter/counter.php?page=7027449&style=0006&nbdigits=5&type=page&initCount=0" title="free hits" Alt="free hits"   border="0" ></a>                           <br/>
+             <!-- hitwebcounter.com --><a href="http://www.hitwebcounter.com" title="" 
+             target="_blank" style="font-family: ; 
+             font-size: px; color: #; text-decoration:  ;">
+             </a>  
+	</div>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</html>

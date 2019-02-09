@@ -1,0 +1,64 @@
+<%  include partials/header %>
+	<script type="text/javascript">
+	function setDefaultImage(source){
+        var badImg = new Image();
+        badImg.src = "https://ubuntuincident.files.wordpress.com/2011/09/tubi.png?w=150&h=150";
+        var cpyImg = new Image();
+        cpyImg.src = source.src;
+
+        if(!cpyImg.width)
+        {
+            source.src = badImg.src;
+        }
+
+    }
+
+
+    function onImgError(source){
+        source.src = "https://ubuntuincident.files.wordpress.com/2011/09/tubi.png?w=150&h=150";
+        source.onerror = ""; 
+        return true; 
+    }
+	</script>
+<div class="container">
+    <div class="container">
+        <div class="container">
+            <div class="container">
+                <div class="container">
+<div class="container">
+    <table> 
+        <% for(var i=0; i<allusers.length; i++){ %>
+        <tr>
+            <div class="row myRow">
+                <div class="col-lg-4 myLeftCol">
+                    <p><strong><%= allusers[i].fullname[0] %></strong></p>
+                </div>
+                <div class="col-lg-4 myMidCol">
+                <div class="card" id="myMyCard" style="width: 6rem;">
+				  			<img src="<%= "/profileimages/" + allusers[i].username  + ".jpg" %>" onerror='onImgError(this);' onLoad='setDefaultImage(this);' class="card-img-top" alt="...">
+				 </div>
+                    
+                </div>
+                <div class="col-lg-4 myRightCol">
+                    <p class="personinfo"><strong>Name: </strong><%= allusers[i].fullname %></p>
+                  <p class="personinfo"><strong>Branch: </strong><%= allusers[i].branch %></p>
+                  <p class="personinfo"><strong>Year: </strong><%= allusers[i].year %></p>
+                  <p class="personinfo"><strong>Username: </strong><%= allusers[i].username %></p>
+                  
+                  <p class="personinfo"><i class="fab fa-github"></i><a href="<%= allusers[i].github %>"> Visit Github Profile</a></p>
+                  <p><a href="<%= "/profile/" + currentUser._id + "/" + allusers[i].username  %>">View Profile</a></p>
+                </div>
+            </div>
+            <br>
+        </tr>
+        <% }; %>
+    </table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<%  include partials/footer %>

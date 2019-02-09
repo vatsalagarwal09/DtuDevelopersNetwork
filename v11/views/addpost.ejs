@@ -1,0 +1,36 @@
+<% include partials/header %>
+	<div class="container instructions">
+		<ul>
+			<li>To bold text enclose text within &ltstrong&gt <strong>...</strong> &lt/strong&gt tag.</li>
+			<li>To add hyperlink enclose text within &lta&gt <strong>...</strong> &lt/a&gt tag with href attribute set to desired link.</li>
+		</ul>
+	</div>
+	
+	<div class="container getpost">
+	<form method="POST" action="<%= "/addpost/" + currentUser._id  %>">
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+    			<label class="input-group-text" for="inputGroupSelect01">PostTag #</label>
+			</div>
+			<select class="custom-select" id="inputGroupSelect01" name="type">
+    			<option selected>Misc</option>
+    			<option value="1">Development</option>
+    			<option value="2">Competetive Prog.</option>
+    			<option value="3">Machine Learning</option>
+			</select>
+		</div>
+		<div id="firstBox" class="form-group subject-box">
+    		<input class="form-control" name="subject" id="exampleFormControlTextarea1" placeholder="Subject goes here...">
+  		</div>
+
+		<div id="secondBox" class="form-group content-box">
+    		<textarea class="form-control" name="body" id="exampleFormControlTextarea1" rows="8" placeholder="Content goes here..."></textarea>
+  		</div>
+  		<div class = "button-div">
+  		<button type="submit" class="btn btn-dark">DONE</button>
+  		</div>
+  	</form>
+	</div>
+
+
+		<%  include partials/footer %>

@@ -1,0 +1,69 @@
+<%  include partials/header %>
+	<div class="container PostID">
+		<p>Post ID: #87</p>
+	</div>
+
+	<div class="container tableContainer">
+		<table class="postInfoTable">
+			<tbody>
+				<tr class="row">
+					<td class="col-lg-1 dateTD postInfo"><%= post.day + "/" + post.month %></td>
+					<td class="col-lg-3 nameTD postInfo">
+						<div class="card" style="width: 3.5rem;">
+  							<img src="<%= "/profileimages/" + post.username  + ".jpg" %>" class="card-img-top" alt="userphoto">
+  						</div>
+  						<p class="names"><%= post.fullname %></p>
+					</td>
+					<td class="col-lg-7 subjectTD postInfo"><%= post.subject %></td>
+					<td class="col-lg-1 praiseTD postInfo">
+						<p class="praiseIcon"><i class="fas fa-award"></i></p>
+						<p class="praiseNumber"><%= post.praises %></p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="container postContainer">
+		<p><%= post.body %></p>
+	</div>
+
+	<div class="container commentsHeadingContainer">
+		<div class="row">
+			<div class="col-lg-10 commentsHeadingDiv">
+				<form method="POST" action="<%= "/comment/" + userid + "/" + post._id  %>">
+		            <div class="form-group subject-box">
+    		    <label for="exampleFormControlTextarea1"><strong>Enter comment here:</strong></label>
+    		    <input class="form-control" name="text" id="exampleFormControlTextarea1">
+  		    </div>
+  		<div class = "button-div">
+  		<button type="submit" class="btn btn-dark">Add Comment</button>
+  		</div>
+  	</form>
+			</div>
+		</div>
+	</div>
+
+		<div class="container tableContainer">
+		<table>
+			<tbody>
+				<% for(var i=comments.length-1; i>=0; i--){ %>
+				<tr class="row">
+					<td class="col-lg-1 dateTD"><%= comments[i].day + "/" + comments[i].month %></td>
+					<td class="col-lg-7 subjectTD"><%= comments[i].text %></td>
+					<td class="col-lg-3 nameTD">
+						<div class="card" style="width: 3.5rem;">
+  							<img src="<%= "/profileimages/" + comments[i].username  + ".jpg" %>" class="card-img-top" alt="...">
+  						</div>
+  						<p class="names"><%= comments[i].fullname %></p>
+					</td>
+					<!--<td class="col-lg-1 praiseTD">-->
+					<!--	<p class="praiseIcon"><i class="fas fa-award"></i></p>-->
+					<!--	<p class="praiseNumber">97</p>-->
+					<!--</td>-->
+				</tr>
+				<% }; %>
+			</tbody>
+		</table>
+	</div>
+<%  include partials/footer %>

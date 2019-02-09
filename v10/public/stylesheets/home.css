@@ -1,0 +1,288 @@
+.navbar-light .navbar-nav .nav-link{
+	color:white;
+}
+
+.navbar-light .navbar-brand{
+	color:white;
+}
+
+#navbar-logo {
+	height: 40px;
+}
+
+#myJumbo {
+	padding: 2rem 2rem;
+	margin: 0px;
+	background-color:white;
+}
+
+.headerbox{
+	background-color:white;
+}
+
+#myJumbo h1 {
+	font-size: 2em;
+}
+
+#jumboRow {
+	background-color: white!important;
+	margin-bottom: 1em;
+	border-left: 2px solid #2C5197;
+	border-right: 2px solid #2C5197;
+	border-bottom: 2px solid #2C5197;
+}
+
+.jumboLogo {
+	margin-bottom: 0px;
+	padding: 2rem 2rem;
+	border-left: 1px solid white;
+}
+
+
+#myNavBar {
+	padding: 0px 0px;
+	background-color:#2C5197;
+	width:100%;
+}
+
+#dtulogo {
+	height: 130px;
+}
+
+.postDivs {
+	background-color: rgb(248,249,250);
+	padding: 0.5rem;
+	border: 2px solid white;
+}
+
+.dateDivs {
+	text-align: center;
+}
+
+.dateOnPosts {
+	text-align: center;
+	margin: 0px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+}
+
+.subject {
+	text-align: center;
+	margin: 0px;
+	font-size: 20px;
+}
+
+.personInfo {
+	text-align: center;
+	margin: 0px;
+	font-size: 20px;
+}
+
+th {
+	text-align: center;
+	border-top: 2px solid white;
+	border-left: 2px solid white;
+	border-right: 2px solid white;
+}
+
+#subjectTH {
+	background-color: rgb(232,236,239);
+}
+
+#nameTH {
+	background-color: rgb(232,236,239);
+}
+
+td {
+	text-align: center;
+	border: 2px solid white;
+}
+
+table {
+	width: 100%;
+}
+
+
+.dateTD {
+	padding: 1.0rem;
+	vertical-align: middle;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.5em;
+}
+
+.subjectTD {
+	padding: 1.0rem;
+	text-align: left;
+	background-color: rgb(232,236,239);
+}
+
+.nameTD {
+	padding: 1.0rem;
+	background-color: rgb(232,236,239);
+
+}
+
+.names {
+	margin: 0px;
+}
+
+.tableContainer {
+	padding: 0px;
+	margin-bottom: 1em;
+	padding: 2px;
+}
+
+#counter {
+	padding: 0.5em;
+	vertical-align: middle;
+	text-align: center;
+    align-items: center; 
+    justify-content: center;
+}
+
+#user-count-logo {
+	font-size: 2em;
+	margin: 0px;
+}
+
+#user-count-number {
+	font-size: 30px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	font-size: 3em;
+	margin-bottom: 0px;
+}
+
+
+.footer {
+	border: 1px solid;
+	border-color:#2C5197;
+	color: white!important;
+	background-color:#2C5197!important;
+	padding: 2em;
+	text-align: center;
+	width: 100%!important;
+	margin-left: auto!important;
+	margin-right: auto!important;
+}
+
+
+.praiseTD {
+	padding: 1.0rem;
+    vertical-align: middle;
+	text-align: center;
+    align-items: center; 
+    justify-content: center;
+    font-size: 24px;
+}
+
+.praiseIcon {
+	margin: 0px;
+}
+
+.praiseNumber {
+	margin: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+
+        .jumboLogo {
+            display: none;
+        }
+}
+
+@media screen and (max-width: 990px) {
+
+        #myJumbo h1{
+            font-size: 36px;
+        }
+        #myJumbo p{
+            font-size: 20px;
+        }
+}
+
+@media screen and (max-width: 768px) {
+
+        #myJumbo h1{
+            font-size: 28px;
+        }
+
+        #myJumbo p{
+            font-size: 16px;
+        }
+}
+
+@media screen and (max-width: 537px) {
+
+        #myJumbo h1{
+            font-size: 24px;
+        }
+        #myJumbo p{
+            font-size: 16px;
+        }
+}
+
+@media screen and (max-width: 470px) {
+
+        #myJumbo h1{
+            font-size: 18px;
+        }
+        #myJumbo p{
+            font-size: 14px;
+        }
+}
+
+
+.headingPostDivs {
+	background-color: #2C5197;
+	color: white;
+	padding-top: 0.3rem;
+	padding-bottom: 0.3rem;
+	padding-left: 0.5rem;
+}
+
+.content {
+	padding: 1rem;
+	text-align: left;
+	border: 1px solid #2C5197;
+}
+
+.subjectWordPara {
+	margin-bottom: 1px;
+}
+
+.namePara {
+	margin-bottom: 1px;
+}
+
+.dateParas {
+	margin: 0px;
+}
+
+.myHrs {
+	margin: 4px;
+}
+
+.linksParaPostDiv {
+	text-align: right;
+	margin: 1px;
+	color: #2C5197;
+}
+
+.readFullPostLink {
+	margin-right: 1.5rem;
+}
+
+.card {
+	margin: 1px!important;
+}
+
+.onePostBox {
+	margin-bottom: 1rem;
+	padding: 2px!important;
+}
+
+.myBox {
+	border: 1px solid #2C5197;
+	padding: 3px;
+}

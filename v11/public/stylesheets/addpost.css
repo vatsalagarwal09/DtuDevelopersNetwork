@@ -1,0 +1,140 @@
+#navbar-logo {
+	height: 40px;
+}
+
+#myJumbo {
+	padding: 2rem 2rem;
+	margin: 0px;
+}
+
+#jumboRow {
+	background-color: rgb(232,236,239);
+	margin-bottom: 1em;
+}
+
+.jumboLogo {
+	margin-bottom: 0px;
+	padding: 2rem 2rem;
+	border-left: 1px solid white;
+}
+
+
+#myNavBar {
+	padding: 0px 0px;
+}
+
+#dtulogo {
+	height: 90%;
+}
+
+#counter {
+	padding: 0.5em;
+	vertical-align: middle;
+	text-align: center;
+    align-items: center; 
+    justify-content: center;
+}
+
+#user-count-logo {
+	font-size: 2em;
+	margin: 0px;
+}
+
+#user-count-number {
+	font-size: 30px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	font-size: 3em;
+	margin-bottom: 0px;
+}
+
+.instructions {
+	background-color: white;
+	padding: 1rem;
+	margin-bottom: 1em;
+	border: 2px solid #2C5197;
+}
+
+.button-div {
+	text-align: right;
+}
+
+.subject-box {
+	padding: 1rem;
+	background-color: rgb(232,236,239);
+}
+
+.content-box {
+	padding: 1rem;
+	background-color: rgb(232,236,239);
+}
+
+.getpost {
+	padding: 0px;
+}
+
+.footer {
+	margin-top: 30px;
+	background-color: rgb(232,236,239);
+	padding: 2em;
+	text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+
+        .jumboLogo {
+            display: none;
+        }
+}
+
+@media screen and (max-width: 990px) {
+
+        #myJumbo h1{
+            font-size: 36px;
+        }
+        #myJumbo p{
+            font-size: 20px;
+        }
+}
+
+@media screen and (max-width: 768px) {
+
+        #myJumbo h1{
+            font-size: 28px;
+        }
+
+        #myJumbo p{
+            font-size: 16px;
+        }
+}
+
+@media screen and (max-width: 537px) {
+
+        #myJumbo h1{
+            font-size: 24px;
+        }
+        #myJumbo p{
+            font-size: 16px;
+        }
+}
+
+@media screen and (max-width: 470px) {
+
+        #myJumbo h1{
+            font-size: 18px;
+        }
+        #myJumbo p{
+            font-size: 14px;
+        }
+}
+
+#firstBox {
+	background-color: white!important;
+	border: 1px solid #2C5197!important;
+}
+
+#secondBox {
+	background-color: white!important;
+	border: 1px solid #2C5197!important;
+}
+

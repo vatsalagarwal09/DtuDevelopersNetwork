@@ -1,0 +1,80 @@
+<% include partials/header %>
+	<div class="container">
+    	<div class="card" style="margin-top: 5%; background-color: rgb(232,236,239);">
+        	<h1 style="text-align: center; margin-top: 2%;">Sign up!</h1>
+        	<div style="width: 50%; margin: 3% auto;">
+            	<form action="/signup" method="POST">
+                    <div class="input-group input-group-sm mb-3">
+                         <div class="input-group-prepend">
+                             <span class="input-group-text mySpans" id="inputGroup-sizing-sm">Name</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Full Name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text myLabels" for="inputGroupSelect01">Year</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>First Year</option>
+                            <option value="1">Second Year</option>
+                            <option value="2">Third Year</option>
+                            <option value="3">Fourth Year</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text myLabels" for="inputGroupSelect01">Branch</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>COE</option>
+                            <option value="1">IT</option>
+                            <option value="2">SE</option>
+                            <option value="3">ECE</option>
+                            <option value="4">MCE</option>
+                            <option value="5">EE</option>
+                            <option value="6">ME</option>
+                            <option value="7">CE</option>
+                            <option value="8">PIE</option>
+                            <option value="8">MAM</option>
+                            <option value="9">PCT</option>
+                            <option value="10">BT</option>
+                        </select>
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                         <div class="input-group-prepend">
+                             <span class="input-group-text mySpans" id="inputGroup-sizing-sm">@Github</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Link your Github">
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                         <div class="input-group-prepend">
+                             <span class="input-group-text mySpans" id="inputGroup-sizing-sm">Username</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                         <div class="input-group-prepend">
+                             <span class="input-group-text mySpans" id="inputGroup-sizing-sm">Password</span>
+                        </div>
+                        <input type="password" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                             <span class="input-group-text mySpans" id="inputGroup-sizing-sm">Confirm Password</span>
+                        </div>
+                        <input type="password" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                	<div class="form-group">
+                    	<button class="btn btn-lg btn-primary btn-block hvr-sweep-to-right">Sign Up</button>
+                	</div>
+                    <div class="form-group">
+                        <label>Already registered? <a href="/login">Login</a></label>
+                    </div>
+            	</form>
+            	<a href="">Go Back</a>
+        	</div>
+    	</div>
+	</div>
+
+</body>
+</html>

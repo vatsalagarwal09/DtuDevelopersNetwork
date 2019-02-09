@@ -1,0 +1,41 @@
+<%  include partials/header %>
+	<script type="text/javascript">
+	function setDefaultImage(source){
+        var badImg = new Image();
+        badImg.src = "https://ubuntuincident.files.wordpress.com/2011/09/tubi.png?w=150&h=150";
+        var cpyImg = new Image();
+        cpyImg.src = source.src;
+
+        if(!cpyImg.width)
+        {
+            source.src = badImg.src;
+        }
+
+    }
+
+
+    function onImgError(source){
+        source.src = "https://ubuntuincident.files.wordpress.com/2011/09/tubi.png?w=150&h=150";
+        source.onerror = ""; 
+        return true; 
+    }
+	</script>
+<div class="container">
+    <table> 
+        <% for(var i=0; i<allusers.length; i++){ %>
+        <tr>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img id="profilePic" src="<%= "/profileimages/" + allusers[i].username  + ".jpg" %>" onerror='onImgError(this);' onLoad='setDefaultImage(this);'>
+                </div>
+                <div class="col-lg-6">
+                  <p><a href="<%= "/profile/" +  + "/" + allusers[i].username  %>"><%= allusers[i].fullname %></a></p>
+                </div>
+            </div>
+        </tr>
+        <% }; %>
+    </table>
+</div>
+
+
+<%  include partials/footer %>

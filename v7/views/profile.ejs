@@ -1,0 +1,70 @@
+<%  include partials/header %>
+	<script type="text/javascript">
+	function setDefaultImage(source){
+        var badImg = new Image();
+        badImg.src = "https://ubuntuincident.files.wordpress.com/2011/09/tubi.png?w=150&h=150";
+        var cpyImg = new Image();
+        cpyImg.src = source.src;
+
+        if(!cpyImg.width)
+        {
+            source.src = badImg.src;
+        }
+
+    }
+
+
+    function onImgError(source){
+        source.src = "https://ubuntuincident.files.wordpress.com/2011/09/tubi.png?w=150&h=150";
+        source.onerror = ""; 
+        return true; 
+    }
+	</script>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3" id="leftColumn">
+				<img id="profilePic" src="<%= "/profileimages/" + user.username  + ".jpg" %>" onerror='onImgError(this);' onLoad='setDefaultImage(this);'>
+				<p class="personinfo"><%= user.fullname %></p>
+				<p></p>
+				<p class="personinfo"><strong>Branch:</strong><%= user.branch %></p>
+				<p class="personinfo"><strong>Year: </strong><%= user.year %> Year</p>
+				<p class="personinfo"><strong>Username: </strong><%= user.username %></p>
+				<p class="personinfo"><a href="<%= user.github %>">Visit Github Profile</a></p>
+				<hr>
+				<p>Upload New Profile Picture</p>
+				<form enctype="multipart/form-data" method="POST" action="/profileimg">
+					<input type="file" name="profileImg">
+					<p></p>
+					<button class="btn btn-dark" type="submit">Submit </button>
+				</form>
+			</div>
+			<div class="col-lg-9" id="rightColumn">
+	    	<table>
+			<thead class="container">
+				<tr class="row">
+					<th class="col-lg-1 col-md-1"></th>
+					<th class="col-lg-10 col-md-7" id="subjectTH">Subject</th>
+					<th class="col-lg-1 col-md-3"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% for(var i=posts.length-1; i>=0; i--){ %>
+				<tr class="row">
+					<td class="col-lg-1 col-md-1 dateTD"><p><%= posts[i].day %> </p><p><%= posts[i].month %></p> </td>
+					<td class="col-lg-10 col-md-7 subjectTD"><a href="<%= "/fullpost/" + user._id + "/" + posts[i].id %>" style="text-decoration: none; color: black;"><%= posts[i].subject %></a></td>
+					<td class="col-lg-1 col-md-1 praiseTD">
+						<p class="praiseIcon"><i class="fas fa-award"></i></p>
+						<p class="praiseNumber"><%= posts[i].praises %></p>
+					</td>
+				</tr>
+				<% }; %>
+				</tbody>
+			</table>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="createPost">
+		<a class="btn btn-dark btn-lg" id="addp" href="<%= "/addpost/" + currentUser._id  %>" role="button">Create Post</a>
+	</div>
+<%  include partials/footer %>
